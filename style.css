@@ -1,0 +1,31 @@
+main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.word {
+  cursor: move;
+  background-color: white;
+  padding: 10px;
+  color: black;
+  border-bottom: 1px solid black;
+  display: inline-block;
+}
+
+.box.over {
+  border: 3px dotted #666;
+}
+
+.drag-answer-num {
+  display: inline-block;
+  font-size: 1.1em;
+  padding: 10px;
+}
+
+.sentence {
+  font-size: 2em;
+}
+
+.insert-word {
+  color: yellow;
+}

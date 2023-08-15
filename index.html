@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://sea-man.org/wp-content/themes/seaman/styles/tests.min.css" />
+    <title>Drag me now</title>
+  </head>
+  <body>
+    <main>
+      <div id="test-desc">
+        <div id="test-status"></div>
+        <h1>Marlins Test</h1>
+
+        <!-- заглушки -->
+        <div id="hint"></div>
+        <div id="close"></div>
+        <div id="test-chat"></div>
+        <div id="q-number"></div>
+        <div id="current-q"></div>
+        <div id="total-q"></div>
+        <div id="q-time"></div>
+        <div id="seconds"></div>
+        <div id="minutes"></div>
+        <main></main>
+        <header></header>
+        <footer></footer>
+        <!-- -->
+      </div>
+      <div id="regime">
+        <p>Выберите режим, в котором хотите пройти <i>CES</i> тест:</p>
+        <div class="regime-buttons">
+          <div id="choose-wisely">
+            <div id="training">
+              <div class="regime-img"><img src="https://sea-man.org/icons/training.png" alt="Тренировка - CES тест" /></div>
+              <div class="regime-name">Тренировочный</div>
+            </div>
+            <div id="exam">
+              <div class="regime-img"><img src="https://sea-man.org/icons/exam.png" alt="Аттестация - CES тест" /></div>
+              <div class="regime-name">Аттестация</div>
+            </div>
+          </div>
+        </div>
+        <style>
+          #answ {
+            max-width: 40em;
+            margin: 0 auto;
+            position: relative;
+            top: 5px;
+          }
+        </style>
+      </div>
+      <div id="start-test" class="hidden-q">Начать тест</div>
+
+      <div id="qWrapper">
+        <div id="q1" class="drag-q questions every-q hidden-q" data="SawHand fileViceSpanner">
+          <div class="q-desc"><span class="q-code">Grammar</span> Перетаскивайте варианты, чтобы расставить в правильном порядке, в соответствии с рисунком. (пр. ответ: 1 - Saw, 2 - Hand file, 3 - Vice, 4 - Spanner)</div>
+          <img src="img.jpg" width="600px" />
+          <div>
+            <div><span class="drag-answer-num">1</span><span draggable="true" class="word">Hand file</span></div>
+            <div><span class="drag-answer-num">2</span><span draggable="true" class="word">Saw</span></div>
+            <div><span class="drag-answer-num">3</span><span draggable="true" class="word">Vice</span></div>
+            <div><span class="drag-answer-num">4</span><span draggable="true" class="word">Spanner</span></div>
+          </div>
+          <button class="check-img">check</button>
+        </div>
+
+        <div class="questions listening every-q hidden-q">
+          <div class="q-desc"><span class="q-code">Listening MC</span> A seafarer is comparing vessels. What is the main difference concerning his new vessel?</div>
+          <audio class="q-audio" controls>
+            <source src="https://sea-man.org/files/sounds/marlins/q3.mp3" type="audio/mpeg" />
+          </audio>
+          <div class="q-var"><i class="far fa-circle"></i> His new ship follows a regular shipping route.</div>
+          <div class="q-var">
+            <i class="far fa-circle"></i> His new ship travels between the Arabian Gulf and China.<span class="right-answer"><i class="fas fa-check-square"></i></span>
+          </div>
+          <div class="q-var">
+            <i class="far fa-circle"></i> His new ship has a lot of variety - every job is different. (пр. ответ) <span class="right-answer"><i class="fas fa-check-square"></i></span>
+          </div>
+          <button class="check-basic">Check</button>
+        </div>
+
+        <div class="drag-q questions every-q hidden-q" data="SaabEagle">
+          <div class="q-desc"><span class="q-code">Reading</span> Выберите правильные слова, чтобы составить предложение. Пр. ответы: Saab, Eagle.</div>
+          <div class="q-text">
+            Special precautions
+            <select class="select-word">
+              <option>[Select]</option>
+              <option>Saab</option>
+              <option>Mercedes</option>
+              <option>Audi</option>
+            </select>
+            should be taken. Also please note
+            <select class="select-word">
+              <option>[Select]</option>
+              <option>Lama</option>
+              <option>Shark</option>
+              <option>Eagle</option>
+            </select>
+          </div>
+          <button class="check-text">check</button>
+        </div>
+
+        <div class="drag-q questions every-q hidden-q" data="WhywastheMastersoangrywiththecrew?">
+          <div class="q-desc"><span class="q-code">Grammar</span> Расположите слова в правильном порядке - Why was the Master so angry with the crew?</div>
+          <div draggable="true" class="word">Why</div>
+          <div draggable="true" class="word">so</div>
+          <div draggable="true" class="word">the</div>
+          <div draggable="true" class="word">the</div>
+          <div draggable="true" class="word">was</div>
+          <div draggable="true" class="word">angry</div>
+          <div draggable="true" class="word">Master</div>
+          <div draggable="true" class="word">with</div>
+          <div draggable="true" class="word">crew?</div>
+          <button class="check-drag">check</button>
+        </div>
+
+        <div class="drag-q questions every-q hidden-q">
+          <div class="q-desc">Перетащите нужное слово в предложение. 1 - so, 2 - the.</div>
+          <div draggable="true" class="word">Why</div>
+          <div draggable="true" class="word">so</div>
+          <div draggable="true" class="word">the</div>
+
+          <div class="sentence">What's <span class="insert-word" data="so">___</span>.</div>
+          <div class="sentence">This is <span class="insert-word" data="the">___</span>.</div>
+          <button class="check-sentence">check</button>
+        </div>
+
+        <div class="drag-q questions every-q hidden-q" data="linkfraydchafedshacklecoiledfigureofeight">
+          <div class="q-desc">Выберите термины, подходящие под каждую из категорий. В каждой категории должно быть 2 термина. Methods: link, frayed; Damaged ropes: chafed, shackle; Config: coiled, figure of eight.</div>
+          <div class="cols col-1">
+            <label>Methods of connection:</label>
+            <select class="select-word">
+              <option>[Select]</option>
+              <option>link</option>
+              <option>frayed</option>
+              <option>chafed</option>
+              <option>shackle</option>
+              <option>coiled</option>
+              <option>figure of eight</option>
+            </select>
+            <select class="select-word">
+              <option>[Select]</option>
+              <option>link</option>
+              <option>frayed</option>
+              <option>chafed</option>
+              <option>shackle</option>
+              <option>coiled</option>
+              <option>figure of eight</option>
+            </select>
+          </div>
+          <div class="cols col-2">
+            <label>Damaged ropes</label>
+            <select class="select-word">
+              <option>[Select]</option>
+              <option>link</option>
+              <option>frayed</option>
+              <option>chafed</option>
+              <option>shackle</option>
+              <option>coiled</option>
+              <option>figure of eight</option>
+            </select>
+            <select class="select-word">
+              <option>[Select]</option>
+              <option>link</option>
+              <option>frayed</option>
+              <option>chafed</option>
+              <option>shackle</option>
+              <option>coiled</option>
+              <option>figure of eight</option>
+            </select>
+          </div>
+          <div class="cols col-3">
+            <label>Configuration of ropes</label>
+            <select class="select-word">
+              <option>[Select]</option>
+              <option>link</option>
+              <option>frayed</option>
+              <option>chafed</option>
+              <option>shackle</option>
+              <option>coiled</option>
+              <option>figure of eight</option>
+            </select>
+            <select class="select-word">
+              <option>[Select]</option>
+              <option>link</option>
+              <option>frayed</option>
+              <option>chafed</option>
+              <option>shackle</option>
+              <option>coiled</option>
+              <option>figure of eight</option>
+            </select>
+          </div>
+          <button class="check-tables">check</button>
+          <div id="check-results">Check results</div>
+        </div>
+
+        <div id="note" class="hidden-q">* В некоторых вопросах теста может быть несколько правильных ответов.</div>
+        <div id="result" class="hidden-q">
+          <div class="results">
+            <div class="result-img">
+              <div class="trophy"><img src="https://sea-man.org/js/trophy.png" /></div>
+            </div>
+            <div class="result-text">
+              <div class="your-result"><i>"Marlins тест"</i> пройден! Ваш результат:</div>
+              <div id="points"></div>
+              <div id="score-points"></div>
+            </div>
+          </div>
+          <div class="social">[social]</div>
+          <div class="try-again"><a class="restart" href="#" onclick="window.location.reload(true);">Пройти CBT тест еще раз</a></div>
+        </div>
+
+        <div>
+          <script src="main.js"></script>
+          <script src="DragDropTouch.js"></script>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
